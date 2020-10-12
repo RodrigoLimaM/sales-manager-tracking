@@ -1,7 +1,6 @@
 package br.com.salesmanager.tracking.kafka;
 
 import br.com.salesmanager.tracking.model.OrderTracking;
-import br.com.salesmanager.tracking.model.Step;
 import br.com.salesmanager.tracking.service.TrackingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +19,16 @@ public class OrderStatusChangeProducer {
     @Autowired
     private TrackingService trackingService;
 
-    public void sendMessage(OrderChange message) {
-        OrderTracking orderTracking = trackingService.findByOrderId(message.getOrderId());
-        orderTracking.getSteps().add(Step.builder()
-                .orderStatus(message.getOrderStatus())
-                .build());
+    public OrderTracking sendMessage(OrderChange message) {
+        OrderTracking orderTracking = trackingService.findNullableByOrderId(message.getOrderId());
 
-        trackingService.save(orderTracking);
+        orderTracking = trackingService.incrementStep(orderTracking, message.getOrderStatus());
+
         log.info("Updated order tracking: {}", orderTracking);
 
         log.info("Produced message: {}, Topic: {}", message, TOPIC);
         kafkaTemplate.send(TOPIC, message);
+
+        return orderTracking;
     }
 }

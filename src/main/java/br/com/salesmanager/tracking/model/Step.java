@@ -23,7 +23,14 @@ public class Step {
     @Field(name = "order_status")
     private OrderStatus orderStatus;
 
-    @CreatedDate
     @Field(name = "date")
     private LocalDateTime date;
+
+    public String getDescription(){
+        return orderStatus.getDescription();
+    }
+
+    public boolean isFinisher(){
+        return orderStatus.isFinisher();
+    }
 }
