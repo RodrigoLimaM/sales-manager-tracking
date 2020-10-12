@@ -17,17 +17,17 @@ Microsservice for tracking management of the sales-manager architecture
       
      `step={String}`
           
-          Possible steps:
-          * PROCESSING_PAYMENT - Processando pagamento;
-          * APPROVED - Pedido aprovado;
-          * CANCELLED - Pedido cancelado;
-          * PREPARING_FOR_SHIPPING - Preparando para envio;
-          * IN_SEPARATION - Em separação;
-          * SENT_TO_CARRIER - Enviado para transportadora;
-          * OUT_FOR_SHIPMENT - Saiu para entrega;
-          * DELIVERED - Entregue;
-          * MISSING_RECIPIENT - Destinatário ausente;
-          * MISPLACED - Extraviado.
+      Possible steps:
+      * PROCESSING_PAYMENT - Processando pagamento;
+      * APPROVED - Pedido aprovado;
+      * CANCELLED - Pedido cancelado;
+      * PREPARING_FOR_SHIPPING - Preparando para envio;
+      * IN_SEPARATION - Em separação;
+      * SENT_TO_CARRIER - Enviado para transportadora;
+      * OUT_FOR_SHIPMENT - Saiu para entrega;
+      * DELIVERED - Entregue;
+      * MISSING_RECIPIENT - Destinatário ausente;
+      * MISPLACED - Extraviado.
  * **Success Response:**
  
     * **Code:** 200 <br />
