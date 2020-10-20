@@ -18,16 +18,16 @@ Microsservice for tracking management of the sales-manager architecture
      `step={String}`
           
       Possible steps:
-      * PROCESSING_PAYMENT - Processando pagamento;
-      * APPROVED - Pedido aprovado;
-      * CANCELLED - Pedido cancelado;
-      * PREPARING_FOR_SHIPPING - Preparando para envio;
-      * IN_SEPARATION - Em separação;
-      * SENT_TO_CARRIER - Enviado para transportadora;
-      * OUT_FOR_SHIPMENT - Saiu para entrega;
-      * DELIVERED - Entregue;
-      * MISSING_RECIPIENT - Destinatário ausente;
-      * MISPLACED - Extraviado.
+      * PROCESSING_PAYMENT - Processing payment;
+      * APPROVED - Approved;
+      * CANCELLED - Cancelled;
+      * PREPARING_FOR_SHIPPING - Preparing for shipping;
+      * IN_SEPARATION - In separation;
+      * SENT_TO_CARRIER - Sent to carrier;
+      * OUT_FOR_SHIPMENT - Out for shipment;
+      * DELIVERED - Delivered;
+      * MISSING_RECIPIENT - Missing recipient;
+      * MISPLACED - Misplaced.
  * **Success Response:**
  
     * **Code:** 200 <br />
@@ -40,31 +40,31 @@ Microsservice for tracking management of the sales-manager architecture
         {
           "orderStatus": "PREPARING_FOR_SHIPPING",
           "date": "2020-10-11T21:37:20.665",
-          "description": "Preparando para envio",
+          "description": "Preparing for shipping",
           "finisher": false
         },
         {
           "orderStatus": "IN_SEPARATION",
           "date": "2020-10-11T21:37:31.44",
-          "description": "Em separação",
+          "description": "In separation",
           "finisher": false
         },
         {
           "orderStatus": "SENT_TO_CARRIER",
           "date": "2020-10-11T21:37:35.959",
-          "description": "Enviado para transportadora",
+          "description": "Sent to carrier",
           "finisher": false
         },
         {
           "orderStatus": "OUT_FOR_SHIPMENT",
           "date": "2020-10-11T21:37:38.204",
-          "description": "Saiu para entrega",
+          "description": "Out for shipment",
           "finisher": false
         },
         {
           "orderStatus": "DELIVERED",
           "date": "2020-10-11T21:49:44.7379328",
-          "description": "Entregue",
+          "description": "Delivered",
           "finisher": true
         }
       ]
@@ -92,31 +92,31 @@ Microsservice for tracking management of the sales-manager architecture
         {
           "orderStatus": "PREPARING_FOR_SHIPPING",
           "date": "2020-10-11T21:37:20.665",
-          "description": "Preparando para envio",
+          "description": "Preparing for shipping",
           "finisher": false
         },
         {
           "orderStatus": "IN_SEPARATION",
           "date": "2020-10-11T21:37:31.44",
-          "description": "Em separação",
+          "description": "In separation",
           "finisher": false
         },
         {
           "orderStatus": "SENT_TO_CARRIER",
           "date": "2020-10-11T21:37:35.959",
-          "description": "Enviado para transportadora",
+          "description": "Sent to carrier",
           "finisher": false
         },
         {
           "orderStatus": "OUT_FOR_SHIPMENT",
           "date": "2020-10-11T21:37:38.204",
-          "description": "Saiu para entrega",
+          "description": "Out for shipment",
           "finisher": false
         },
         {
           "orderStatus": "DELIVERED",
           "date": "2020-10-11T21:49:44.7379328",
-          "description": "Entregue",
+          "description": "Delivered",
           "finisher": true
         }
       ]
