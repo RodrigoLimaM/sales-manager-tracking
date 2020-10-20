@@ -70,6 +70,58 @@ Microsservice for tracking management of the sales-manager architecture
       ]
     }
     ```
+
+* **URL**\
+/tracking/{orderId}
+
+* **Method:**\
+ `GET`
+
+  *  **Path Variables**
+
+     `orderId={String}`
+ * **Success Response:**
+
+    * **Code:** 200 <br />
+        **Content:**
+    ```json
+    {
+      "_id": "5f83a5410bc53f10ac480257",
+      "orderId": "5f83a53b750af5185f7ce6e6",
+      "steps": [
+        {
+          "orderStatus": "PREPARING_FOR_SHIPPING",
+          "date": "2020-10-11T21:37:20.665",
+          "description": "Preparando para envio",
+          "finisher": false
+        },
+        {
+          "orderStatus": "IN_SEPARATION",
+          "date": "2020-10-11T21:37:31.44",
+          "description": "Em separação",
+          "finisher": false
+        },
+        {
+          "orderStatus": "SENT_TO_CARRIER",
+          "date": "2020-10-11T21:37:35.959",
+          "description": "Enviado para transportadora",
+          "finisher": false
+        },
+        {
+          "orderStatus": "OUT_FOR_SHIPMENT",
+          "date": "2020-10-11T21:37:38.204",
+          "description": "Saiu para entrega",
+          "finisher": false
+        },
+        {
+          "orderStatus": "DELIVERED",
+          "date": "2020-10-11T21:49:44.7379328",
+          "description": "Entregue",
+          "finisher": true
+        }
+      ]
+    }
+    ```
     
 * **Error Response:**
 

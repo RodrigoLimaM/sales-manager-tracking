@@ -27,6 +27,10 @@ public class TrackingService {
         return trackingRepository.findByOrderId(orderId);
     }
 
+    public Optional<OrderTracking> findOptionalByOrderId(String orderId) {
+        return Optional.ofNullable(trackingRepository.findByOrderId(orderId));
+    }
+
     public OrderTracking findNullableByOrderId(String orderId) {
         return Optional.ofNullable(this.findByOrderId(orderId)).orElse(OrderTracking.builder()
                 .orderId(orderId)
