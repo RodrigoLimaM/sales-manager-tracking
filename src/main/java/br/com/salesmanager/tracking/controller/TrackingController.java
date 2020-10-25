@@ -1,6 +1,7 @@
 package br.com.salesmanager.tracking.controller;
 
 import br.com.salesmanager.tracking.model.OrderTracking;
+import br.com.salesmanager.tracking.model.Step;
 import br.com.salesmanager.tracking.model.enums.OrderStatus;
 import br.com.salesmanager.tracking.service.TrackingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Validated
 @RestController
@@ -31,5 +35,10 @@ public class TrackingController {
         return trackingService.findOptionalByOrderId(orderId)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.noContent().build());
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<List<OrderStatus>> getTrackingStatus() {
+        return ResponseEntity.ok().body(Arrays.asList(OrderStatus.values()));
     }
 }

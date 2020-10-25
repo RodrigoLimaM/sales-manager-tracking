@@ -135,6 +135,31 @@ Microsservice for tracking management of the sales-manager architecture
     }
     ```
   
+* **URL**\
+/tracking/status
+  
+* **Method:**\
+ `GET`
+
+ * **Success Response:**
+
+    * **Code:** 200 <br />
+        **Content:**
+    ```json
+    [
+      "PROCESSING_PAYMENT",
+      "APPROVED",
+      "CANCELLED",
+      "PREPARING_FOR_SHIPPING",
+      "IN_SEPARATION",
+      "SENT_TO_CARRIER",
+      "OUT_FOR_SHIPMENT",
+      "DELIVERED",
+      "MISSING_RECIPIENT",
+      "MISPLACED"
+    ]
+    ```
+  
  * **Architecture:**
  
     ![Alt text](https://user-images.githubusercontent.com/51386403/95694559-0ef35880-0c09-11eb-9667-9ae838b4d40f.png "Architecture")
