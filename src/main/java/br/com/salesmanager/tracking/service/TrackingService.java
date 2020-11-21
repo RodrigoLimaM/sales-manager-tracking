@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -55,7 +56,7 @@ public class TrackingService {
     }
 
     public OrderTracking incrementStep(OrderTracking orderTracking, OrderStatus status) {
-        var steps = orderTracking.getSteps();
+        List<Step> steps = orderTracking.getSteps();
         steps.add(Step.builder()
                 .orderStatus(status)
                 .date(LocalDateTime.now())
