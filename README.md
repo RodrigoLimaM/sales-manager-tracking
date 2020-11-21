@@ -162,7 +162,7 @@ Microsservice for tracking management of the sales-manager architecture
   
  * **Architecture:**
  
-    ![Alt text](https://user-images.githubusercontent.com/51386403/95694559-0ef35880-0c09-11eb-9667-9ae838b4d40f.png "Architecture")
+    ![Alt text](https://user-images.githubusercontent.com/51386403/99865172-a9d73f00-2b86-11eb-8b75-aa8b54637b19.png "Architecture")
     * 1 - Will receive an order and check if stock is available;
     * 2 - If has stock, will create the order and persist on MongoDB with status ***PROCESSING_PAYMENT***;
     * 3 - The persisted order will be produced on ***NEW_ORDER*** Kafka topic;
